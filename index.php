@@ -15,7 +15,7 @@ include ("connection.php");
         <form name="form" action="login.php" onsubmit ="return isvalid()" method="POST">
             <label>Username:</label>
             <input type ="text" id="user" name="user"><br></br>
-            <label>Password</label>
+            <label>Password:</label>
             <input type ="password" id="pass" name="pass"><br></br>
             <input type="submit" id="btn" value="Login" name="submit"/>
 
@@ -36,5 +36,7 @@ include ("connection.php");
 
         } 
     </script>
+    <a href="register.php" class="button-class">
+    Create Account</a>
 </body>
 </html>

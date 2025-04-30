@@ -1,8 +1,6 @@
 <?php
-// cafeteria_menu.php
 session_start();
 
-// Define menu items
 $menu = [
     "Drinks" => [
         "Coffee" => 2.50,
