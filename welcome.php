@@ -154,7 +154,7 @@ if (isset($_POST['clear'])) {
 </head>
 <body>
 
-    <h1>🍔 Welcome to Our Cafeteria 🍔</h1>
+    <h1> Welcome to Our Cafeteria </h1>
 
     <div class="menu-container">
         <?php foreach ($menu as $category => $items): ?>
