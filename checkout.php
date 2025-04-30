@@ -19,55 +19,7 @@ foreach ($_SESSION['cart'] as $cartItem) {
 <head>
     <meta charset="UTF-8">
     <title>Checkout</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
-            margin: 20px;
-        }
-        .checkout-container {
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 600px;
-            margin: 0 auto;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        .checkout-item {
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 1px solid #eee;
-            padding: 10px 0;
-        }
-        .total {
-            font-weight: bold;
-            text-align: right;
-            margin-top: 20px;
-            font-size: 18px;
-        }
-        .button-container {
-            text-align: center;
-            margin-top: 30px;
-        }
-        .button-container a, .button-container button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            margin: 5px;
-            text-decoration: none;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        .button-container a:hover, .button-container button:hover {
-            background-color: #45a049;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
