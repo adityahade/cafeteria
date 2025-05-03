@@ -29,12 +29,12 @@ foreach ($_SESSION['cart'] as $cartItem) {
         <?php foreach ($_SESSION['cart'] as $cartItem): ?>
             <div class="checkout-item">
                 <span><?php echo htmlspecialchars($cartItem['item']); ?> x <?php echo $cartItem['quantity']; ?></span>
-                <span>$<?php echo number_format($cartItem['price'] * $cartItem['quantity'], 2); ?></span>
+                <span>₹<?php echo number_format($cartItem['price'] * $cartItem['quantity'], 2); ?></span>
             </div>
         <?php endforeach; ?>
 
         <div class="total">
-            Total: $<?php echo number_format($total, 2); ?>
+            Total: ₹<?php echo number_format($total, 2); ?>
         </div>
 
         <div class="button-container">

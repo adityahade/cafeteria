@@ -3,22 +3,23 @@ session_start();
 
 $menu = [
     "Drinks" => [
-        "Coffee" => 2.50,
-        "Tea" => 2.00,
-        "Smoothie" => 4.00,
-        "Water" => 1.00
+        "Kitchen Tea" => 10,
+        "Cold Coffee" => 18, 
+        "Coke" => 21,
+        "Lassi" => 18
     ],
     "Snacks" => [
-        "Sandwich" => 5.00,
-        "Muffin" => 3.00,
-        "Cookie" => 1.50,
-        "Chips" => 2.00
+        "Aloo Patties" => 16,
+        "Paneer Patties" => 25,
+        "Burger" => 30,
+        "Chips" => 19
     ],
     "Meals" => [
-        "Burger" => 8.00,
-        "Pizza Slice" => 4.50,
-        "Pasta" => 7.00,
-        "Salad" => 6.00
+        "Bread Omelette" => 22,
+        "Boiled Egg" => 9,
+        "Pizza" => 80,
+        "Pasta" => 25
+        
     ]
 ];
 
@@ -53,16 +54,9 @@ if (isset($_POST['clear'])) {
 <head>
     <meta charset="UTF-8">
     <title>Cafeteria Menu</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
-            margin: 20px;
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
+
         .menu-container {
             display: flex;
             gap: 20px;
@@ -73,13 +67,13 @@ if (isset($_POST['clear'])) {
         .menu-section {
             background: #ffffff;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 10px 4px 8px rgba(0,0,0,0.1);
             padding: 20px;
             width: 300px;
         }
         .menu-section h2 {
-            background-color: #4CAF50;
-            color: white;
+            background-color:rgb(164, 239, 232);
+            color: black;
             margin: -20px -20px 20px -20px;
             padding: 15px;
             border-top-left-radius: 10px;
@@ -102,8 +96,8 @@ if (isset($_POST['clear'])) {
             gap: 8px;
         }
         button {
-            background-color: #4CAF50;
-            color: white;
+            background-color:rgb(164, 239, 232);
+            color: black;
             border: none;
             padding: 6px 10px;
             border-radius: 5px;
@@ -111,7 +105,7 @@ if (isset($_POST['clear'])) {
             font-size: 14px;
         }
         button:hover {
-            background-color: #45a049;
+            background-color:rgb(164, 239, 232);
         }
         .quantity-display {
             min-width: 25px;
@@ -127,6 +121,7 @@ if (isset($_POST['clear'])) {
             margin: 0 auto;
         }
         .cart-section h2 {
+
             text-align: center;
             margin-bottom: 20px;
         }
@@ -163,7 +158,7 @@ if (isset($_POST['clear'])) {
                 ?>
                     <div class="item">
                         <div>
-                            <?php echo htmlspecialchars($item); ?> - $<?php echo number_format($price, 2); ?>
+                            <?php echo htmlspecialchars($item); ?> - ₹<?php echo number_format($price, 2); ?>
                         </div>
                         <form method="post">
                             <input type="hidden" name="item" value="<?php echo htmlspecialchars($item); ?>">
@@ -189,10 +184,10 @@ if (isset($_POST['clear'])) {
         ?>
             <div class="cart-item">
                 <span><?php echo htmlspecialchars($cartItem['item']); ?> x <?php echo $cartItem['quantity']; ?></span>
-                <span>$<?php echo number_format($subtotal, 2); ?></span>
+                <span>₹<?php echo number_format($subtotal); ?></span>
             </div>
         <?php endforeach; ?>
-        <div class="total">Total: $<?php echo number_format($total, 2); ?></div>
+        <div class="total">Total: ₹<?php echo number_format($total, 2); ?></div>
 
         <form method="post" style="text-align:center; margin-top:20px;">
             <button type="submit" name="clear">Clear Cart</button>

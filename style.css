@@ -2,7 +2,6 @@ body{
     background-color: rgb(164, 239, 232);
     margin:20px;
     font-family: Arial, sans-serif;
-    text-align: center;
 }
 #form{
     background-color: white;
@@ -82,3 +81,4 @@ body{
 .button-container a:hover, .button-container button:hover {
     background-color: rgb(72, 198, 194);
 }
+
