@@ -4,7 +4,7 @@
         $username = $_POST['user'];
         $password = $_POST['pass'];
 
-        $sql = "select * from login where username='$username'";
+        $sql = "select * from users where username='$username'";
         $result = mysqli_query($conn,$sql);
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
         $count = mysqli_num_rows($result);
@@ -15,7 +15,7 @@
         </script>';
         }
         else{
-            $stmt = $conn->prepare("insert into login (username, password) VALUES ('$username','$password')");
+            $stmt = $conn->prepare("insert into users (username, password) VALUES ('$username','$password')");
             if ($stmt->execute()) {
                 echo "New record inserted successfully!";
                 header("Location:index.php");
